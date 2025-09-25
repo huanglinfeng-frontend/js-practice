@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 1000px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            text-align: center;
+            font-size: 50px;
+            line-height: 200px;
+            font-weight: 700;
+        }
+
+        .click {
+            position: absolute;
+            right: 10px;
+            top: 135px;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            cursor: cell;
+            /*鼠标类型*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <button>点击</button>
+
+    <div class="box">广告</div>
+    <div class="click">x</div>
+    <script>
+        //元素对象.addEventistener('事件类型'，要执行的函数)
+
+        // const btn = document.querySelector('button')
+        // btn.addEventListener('click', function () {
+        //     alert('你早啊')//click,鼠标点击事件
+        // })
+
+        const click = document.querySelector('.click')
+        const box = document.querySelector('.box')
+        click.addEventListener('click', function () {
+            box.style.display = 'none'//关闭盒子
+            // box.style.display = 'block'//打开盒子
+        })
+
+    </script>
+</body>
+
+</html>
