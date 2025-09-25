@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['pink', 'red', 'blue']
+        for (let k in arr) {
+            console.log(k);//数组的下标，但k是字符串型，所以不推荐遍历数组
+        }
+        //但是用于遍历对象
+        let obj = {
+            uname: 'lin',
+            age: 19,
+            gender: '男'
+        }
+        for (let key in obj) {
+            console.log(k);//得到的属性名为，'uname'
+            console.log(obj[k]);
+
+        }
+
+
+        //遍历数组对象
+        let students = [
+            { name: '小明', age: 18, gender: '男', hometown: '河北' },
+            { name: '小红', age: 19, gender: '女', hometown: '河南' },
+            { name: '小刚', age: 17, gender: '男', hometown: '山西' },
+            { name: '小丽', age: 18, gender: '女', hometown: '山东' }
+        ]
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i]);
+            console.log(students[i].name);
+
+
+        }
+    </script>
+</body>
+
+</html>

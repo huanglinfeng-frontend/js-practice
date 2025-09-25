@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //生成任意范围之间的数
+        console.log(Math.random());//左开右闭，取[0，1）中的一个小数
+        console.log(Math.floor(Math.random() * 11));//[0,11)之间的一个整数
+        Math.floor(Math.random() * (N - M + 1)) + N//取[N,M]
+
+
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+        let num = Math.floor(Math.random() * arr.length)
+        document.write(arr[num])
+        arr.splice[num, 1]
+
+
+
+        let num1 = Math.floor(Math.random() * 10) + 1
+        while (true) {
+            let num2 = +prompt('请输入一个数字')
+            if (num2 > num1) {
+                alert('数字猜大了，继续猜')
+            } else if (num2 < num1) {
+                alert('数字猜小了，继续猜')
+            } else {
+                alert('猜对了')
+                break
+            }
+        }
+        let flag = true //开关变量
+
+
+
+        function getrandomcolor(flag) {
+            let str = '#'
+            if (flag = true) {
+                let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+
+                for (let i = 0; i < 7; i++) {
+                    let num = Math.floor(Math.random() * arr.length)
+                    str += arr[num]
+                }
+                return str
+
+            }
+            else {
+                let r = Math.floor(Math.random() * 256)
+                let g = Math.floor(Math.random() * 256)
+                let b = Math.floor(Math.random() * 256)
+                return `rgb${r},${g},${b}`
+            }
+
+        }
+        console.log(getrandomcolor(prompt('请输入‘true’或‘false’')));
+
+    </script>
+</body>
+
+</html>
