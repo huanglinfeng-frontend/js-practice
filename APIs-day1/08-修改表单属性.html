@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="电脑">
+
+
+
+    <input type="checkbox" name="" id="">
+
+
+
+
+    <button>点击</button>
+
+
+
+    <script>
+        const uname = document.querySelector('input')
+        //获取表单里的值用  表单.value
+        console.log(uname.value);//打印出来就是电脑
+        // 修改
+        uname.value = '大帅b'
+        uname.type = 'password'//隐藏文本
+
+
+
+        const ipt = document.querySelector('input')
+        ipt.checked = true//复选框全选，
+        // checked只能接受布尔值，但只要不是空都转换为true
+        ipt.checked = 'true'
+
+
+
+        const button = document.querySelector('button')
+        button.disabled = true//禁用按钮
+    </script>
+</body>
+
+</html>

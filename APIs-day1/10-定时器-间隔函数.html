@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setInterval(函数，间隔时间),单位毫秒
+        setInterval(function () {
+            console.log('一秒执行一次');
+        }, 1000)
+
+        // 第二种写法
+        function fn() {
+            console.log('一秒执行一次');
+
+        }
+        let n = setInterval(fn, 1000)
+        //每个定时器都有唯一id，他们的返回值就是id数字
+
+        clearInterval(n)//关闭定时
+
+    </script>
+</body>
+
+</html>

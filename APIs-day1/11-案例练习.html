@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10">
+    用户注册协议
+</textarea>
+    <br>
+    <button class="btn" disabled>我已同意(60)</button>
+    <!-- disabled,让这个按钮先不可用 -->
+    <script>
+        const btn = document.querySelector('.btn')
+        let i = 60
+        let n = setInterval(function () {
+            i--
+            btn.innerHTML = `我已同意(${i})`//button比较特殊作为表单他不是用value获取文本，而是用innerhtml
+            if (i === 0) {
+                clearInterval(n)
+                btn.disabled = false
+                btn.innerHTML = '我已同意'
+            }
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

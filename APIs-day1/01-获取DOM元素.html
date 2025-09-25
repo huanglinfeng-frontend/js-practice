@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"> 123</div>
+    <div class="box">abc</div>
+    <p id="nav">
+        导航栏
+    </p>
+    <ul>
+        <li>12</li>
+        <li>34</li>
+        <li>56</li>
+    </ul>
+    <script>
+        //语法
+        // document.querySelector('css选择器')
+        //返回值：css选择器匹配的第一个元素
+        //有两个div获取匹配的第一个div
+        // const box = document.querySelector('div')
+        //两种方法二选一
+        const box = document.querySelector('.box')
+        const nav = document.querySelector('#nav')
+        //我自己总结：用class命名的获取时加·  用id的获取时加#
+        //获取第一个小li
+        // const li = document.querySelector('ul li:first-child')
+        console.log(box);
+        console.log(nav);
+        console.log(li);
+
+
+        //选择多个元素
+        document.querySelectorAll('css选择器')
+        //返回值：nodelist 对象集合
+        //选择所有的li
+        const li = document.querySelectorAll('ul li')
+        //querySelectorAll获取过来的是伪数组
+
+
+    </script>
+</body>
+
+</html>
