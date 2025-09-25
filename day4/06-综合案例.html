@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function time(x = 0) {
+            let h = parseInt(x / 60 / 60 % 24)
+            let H = h > 9 ? h : '0' + h
+            let m = parseInt(x / 60 % 60)
+            let M = m > 9 ? m : '0' + m
+            let s = parseInt(x % 60)
+            let S = s > 9 ? s : '0' + s
+            return [H, M, S]//还可以return`${H}时${M}分${S}秒`
+            //未声明的变量会变成全局作用
+        }
+        let arr = time(+prompt('输入总秒数x'))
+        document.write(`${arr[0]}时${arr[1]}分${arr[2]}秒`)
+    </script>
+</body>
+
+</html>

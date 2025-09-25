@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //匿名函数无法直接调用，得先声明函数表达式
+        let fn = function (x, y) {
+            document.write(x + y)
+        }
+        fn(1, 2)//并且调用必须在表达式之后
+
+        //具名表达式得调用可以写在任意位置
+        fn(2, 3)
+        function fn(x, y) {
+            document.write(x + y)
+        }
+    </script>
+</body>
+
+</html>

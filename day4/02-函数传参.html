@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function getSum(start, end) {//这里面的叫形参
+        //     let sum = 0
+        //     for (let i = start; i <= end; i++) {
+        //         sum += i
+
+        //     }
+        //     console.log(sum);
+        // }
+        // getSum(3, 50)//将50传入end中,里面的参数是实参
+
+
+
+
+        // function getSum1(start = 0, end = 0) {//最好给形参一个默认值
+        //     sum1 = start + end
+        //     document.write(sum1)
+        // }
+        // getSum1(+prompt('输入一个数'), +prompt('输入另一个数'))
+
+
+        function getSum2(arr = []) {
+
+            let sum2 = 0
+            for (let i = 0; i < arr.length; i++) {
+                sum2 += arr[i]
+
+            }
+            document.write(sum2)
+        }
+        getSum2([+prompt('请输入学生的每科成绩'), +prompt(), +prompt(), +prompt()])
+    </script>
+</body>
+
+</html>
