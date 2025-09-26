@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding-top: 100px;
+            height: 3000px;
+        }
+
+        div {
+            display: none;
+            margin: 100px;
+            overflow: scroll;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+        我有很多字我有很多字我有很多字
+    </div>
+
+
+    <script>
+        const div = document.querySelector('div')
+        //页面滚动
+        window.addEventListener('scroll', function () {
+            console.log(document.documentElement.scrollTop);
+            //页面滚动了多少
+            //那么可以滚动来控制页面元素是否显示
+            const n = document.documentElement.scrollTop
+            if (n >= 100) {
+                div.style.display = 'block'
+            } else {
+                div.style.display = 'none'
+            }
+        })
+        // const div = document.querySelector('div')
+        div.addEventListener('scroll', function () {
+            console.log(div.scrollTop);//看距离顶部滚动了多少像素
+        })
+    </script>
+</body>
+
+</html>

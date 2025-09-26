@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dad {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .baby {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dad">
+        <div class="baby"></div>
+    </div>
+    <script>
+        const dad = document.querySelector('.dad')
+        const baby = document.querySelector('.baby')
+        dad.addEventListener('mouseover', function () {
+            alert('有冒泡')
+        })
+        dad.addEventListener('mouseenter', function () {
+            alert('无冒泡，推荐')
+        })
+    </script>
+</body>
+
+</html>

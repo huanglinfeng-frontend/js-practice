@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://www.bilibili.com/">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        const from = document.querySelector('from')
+        from.addEventListener('submit', function (e) {
+            e.preventDefault()//阻止提交
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>第1个孩子</li>
+        <li>第2个孩子</li>
+        <li>第3个孩子</li>
+        <li>第4个孩子</li>
+        <li>第5个孩子</li>
+        <p>111111</p>
+    </ul>
+    <!-- ul>li{第$个孩子}*5 -->
+    <script>
+        const ul = document.querySelector('ul')
+        ul.addEventListener('click', function (e) {
+            // this.style.color = 'red'//这样一点击全变红色
+            // console.log(e);//点击一个li，就获得了其属性，发现targe为其专属
+            // 但当我加上p时，他也有targe，那我就近一步打印
+            // console.dir(e.target)//发现tagName不同
+            // 所以在保证p点击不变红的情况下
+            if (e.target.tagName === 'LI') {
+                e.target.style.color = 'red'
+            }
+        })
+    </script>
+</body>
+
+</html>
